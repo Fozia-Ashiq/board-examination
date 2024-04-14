@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Sign Up</title>
+    <link rel="stylesheet" href="SignUp.css">
+</head>
+<body>
+    <script src="SignUp.js"></script>
+   <form action="httpbin://org/post" method="post"></form>
+    <div class="container">
+       <h3>Student Sign Up</h3>
+     <form id="signup-form">
+         <div class="form-group">
+            <label for="fullname">Full Name:</label>
+            <input type="texxt" id="fullname" name="fullname" required>
+         </div>
+         <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" spellcheck="false" id="email" name="email" required>
+            <span id="email-error"></span>  
+         </div>
+         <div class="form-group">
+            <label for="pasword">Password:</label>
+            <input type="password" spellcheck="false" id="password" name="password" required>
+            <span id="email-error"></span>  
+         </div>
+         <div class="form-group">
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+         </div>
+         <div class="form-group">
+            <label for="birthdate">Date of Birth:</label>
+            <input type="date" id="birthdate" name="birthdate" required>
+         </div>
+         <div class="form-group">
+             <label for="gender">Gender:</label>
+             <select id="gender" name="gender" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+             </select>
+         </div>
+           <div class="form-group">
+               <button type="submit" onclick="validateForm()">Sign Up</button>
+          </div>
+          <div class="form-group">
+    <div class="g-recaptcha" data-sitekey="6LePLLMpAAAAAOfdLorCRqQudNyioJHrhk9g7hMv"></div>
+</div>
+      </form>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>      
+    <title>Board Examination website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="LogIn.js"></script>
+<div>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+               <img src="logo.jpeg" class="logo">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="examination.html">EXAMINATION</a></li>
+                    <li><a href="result.html">RESULT</a></li>
+                    <li><a href="institute.html">INSTITUTES</a></li>
+                </ul>
+            </div>
+              <div class="search">
+                <input class="srch" type="search" name="" placeholder="type to text">
+                <a href="#"><button class="btn">search</button></a>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Intermediate and<br><span>Secondary</span><br>Education</h1>
+            <p class="par">Welcome to our Board Exam Website! Your gateway to essential resources, exam updates,
+                 and insightful guidance. We are dedicated to facilitating your academic journey with accurate 
+                 information, helpful tips, and valuable support. Prepare confidently, excel proudly, and 
+                 embark on the path to success with us. Best of luck on your exams!Our Intermediate and 
+                 Secondary Education website is a comprehensive platform designed to cater to the
+                  academic needs of students in the intermediate and secondary levels.
+            </p>
+            <button class="cn"><a href="#">JOIN US</a></button> 
+            
+            <div class="form">
+                <h2>Login Here</h2>
+             <input type="email" spellcheck="false" name="email" id="email-field" placeholder="enter email here" >
+             <span id="email-error"></span>   
+             <input type="password" spellcheck="false" id="password-field" placeholder="enter password here">
+             <span id="password-error"></span>
+             <button class="btnn" onclick="validateForm()"><a href="#">Log In</a></button>
+             <p class="link">Don't have any account<br>
+             <a href="SignUp.html">SignUp Here</a></p>
+             <p class="liw">LogIn with</p>
+
+               <div class="icons">
+                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+               </div>
+         </div>
+     </div>
+  </div>
+</div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script>
+    function validateForm() {
+        var emailField = document.getElementById("email-field").value;
+        var passwordField = document.getElementById("password-field").value;
+        var emailError = document.getElementById("email-error");
+        var passwordError = document.getElementById("password-error");
+        var valid = true;
+
+        // Email validation
+        if (!emailField.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+            emailError.innerHTML = "please enter a valid email";
+            valid = false;
+        } else {
+            emailError.innerHTML = "";
+        }
+
+        // Password validation
+        if (passwordField.length < 8) {
+            passwordError.innerHTML = "password must be at least 8 characters long";
+            valid = false;
+        } else {
+            passwordError.innerHTML = "";
+        }
+        if (valid) {
+            alert("Login successful!");
+        }
+    }
+</script>
+ </body>
+</html>
